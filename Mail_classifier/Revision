@@ -1,0 +1,224 @@
+Last login: Wed Mar  6 14:30:22 on ttys000
+Udays-MacBook-Air:~ udayadityasingh$ /Users/udayadityasingh/.anaconda/navigator/a.tool ; exit;
+bash: activate: No such file or directory
+bash-3.2$ sudo
+usage: sudo -h | -K | -k | -V
+usage: sudo -v [-AknS] [-g group] [-h host] [-p prompt] [-u user]
+usage: sudo -l [-AknS] [-g group] [-h host] [-p prompt] [-U user] [-u user]
+            [command]
+usage: sudo [-AbEHknPS] [-C num] [-g group] [-h host] [-p prompt] [-u user]
+            [VAR=value] [-i|-s] [<command>]
+usage: sudo -e [-AknS] [-C num] [-g group] [-h host] [-p prompt] [-u user] file
+            ...
+bash-3.2$ python3 sudo pip install numpy
+/usr/local/Cellar/python/3.7.1/Frameworks/Python.framework/Versions/3.7/Resources/Python.app/Contents/MacOS/Python: can't open file 'sudo': [Errno 2] No such file or directory
+bash-3.2$ sudo python3 pip install numpy
+Password:
+/usr/local/Cellar/python/3.7.1/Frameworks/Python.framework/Versions/3.7/Resources/Python.app/Contents/MacOS/Python: can't open file 'pip': [Errno 2] No such file or directory
+bash-3.2$ python3 -m pip install numpy
+Collecting numpy
+  Downloading https://files.pythonhosted.org/packages/a6/6f/cb20ccd8f0f8581e0e090775c0e3c3e335b037818416e6fa945d924397d2/numpy-1.16.2-cp37-cp37m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl (13.9MB)
+    100% |████████████████████████████████| 13.9MB 56kB/s 
+Installing collected packages: numpy
+Could not install packages due to an EnvironmentError: [Errno 13] Permission denied: '/usr/local/bin/f2py'
+Consider using the `--user` option or check the permissions.
+
+bash-3.2$ sudo python3 -m pip install numpy
+Password:
+The directory '/Users/udayadityasingh/Library/Caches/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+The directory '/Users/udayadityasingh/Library/Caches/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Requirement already satisfied: numpy in /usr/local/lib/python3.7/site-packages (1.16.2)
+bash-3.2$ sudo python3 -m pip install scikit-learn
+The directory '/Users/udayadityasingh/Library/Caches/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+The directory '/Users/udayadityasingh/Library/Caches/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Collecting scikit-learn
+  Downloading https://files.pythonhosted.org/packages/bd/1a/5dc99dfa7e7bf2e1f22a07f440b61299148a42d13dee1d5153360313ed67/scikit_learn-0.20.3-cp37-cp37m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl (8.0MB)
+    100% |████████████████████████████████| 8.0MB 109kB/s 
+Collecting scipy>=0.13.3 (from scikit-learn)
+  Downloading https://files.pythonhosted.org/packages/dd/6c/ccf7403d14f0ab0f20ce611696921f204f4ffce99a4fd383c892a6a7e9eb/scipy-1.2.1-cp37-cp37m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl (27.3MB)
+    100% |████████████████████████████████| 27.3MB 68kB/s 
+Requirement already satisfied: numpy>=1.8.2 in /usr/local/lib/python3.7/site-packages (from scikit-learn) (1.16.2)
+Installing collected packages: scipy, scikit-learn
+Successfully installed scikit-learn-0.20.3 scipy-1.2.1
+bash-3.2$ python3 /Users/udayadityasingh/Desktop/machine-learning-101-master/chapter1/code/classifier.py 
+Traceback (most recent call last):
+  File "/Users/udayadityasingh/Desktop/machine-learning-101-master/chapter1/code/classifier.py", line 62, in <module>
+    dictionary = make_Dictionary(TRAIN_DIR)
+  File "/Users/udayadityasingh/Desktop/machine-learning-101-master/chapter1/code/classifier.py", line 10, in make_Dictionary
+    emails = [os.path.join(root_dir,f) for f in os.listdir(root_dir)]
+FileNotFoundError: [Errno 2] No such file or directory: '../train-mails'
+bash-3.2$ python3 /Users/udayadityasingh/Desktop/machine-learning-101-master/chapter1/code/classifier.py 
+  File "/Users/udayadityasingh/Desktop/machine-learning-101-master/chapter1/code/classifier.py", line 59
+    TRAIN_DIR = ../train-mails
+                ^
+SyntaxError: invalid syntax
+bash-3.2$ python3 /Users/udayadityasingh/Desktop/machine-learning-101-master/chapter1/code/classifier.py 
+  File "/Users/udayadityasingh/Desktop/machine-learning-101-master/chapter1/code/classifier.py", line 59
+    TRAIN_DIR = ../train-mails
+                ^
+SyntaxError: invalid syntax
+bash-3.2$ python3 /Users/udayadityasingh/Desktop/machine-learning-101-master/chapter1/code/classifier.py 
+Traceback (most recent call last):
+  File "/Users/udayadityasingh/Desktop/machine-learning-101-master/chapter1/code/classifier.py", line 62, in <module>
+    dictionary = make_Dictionary(TRAIN_DIR)
+  File "/Users/udayadityasingh/Desktop/machine-learning-101-master/chapter1/code/classifier.py", line 10, in make_Dictionary
+    emails = [os.path.join(root_dir,f) for f in os.listdir(root_dir)]
+FileNotFoundError: [Errno 2] No such file or directory: '../train-mails'
+bash-3.2$ python3 /Users/udayadityasingh/Desktop/machine-learning-101-master/chapter1/code/classifier.py 
+Traceback (most recent call last):
+  File "/Users/udayadityasingh/Desktop/machine-learning-101-master/chapter1/code/classifier.py", line 62, in <module>
+    dictionary = make_Dictionary(TRAIN_DIR)
+  File "/Users/udayadityasingh/Desktop/machine-learning-101-master/chapter1/code/classifier.py", line 10, in make_Dictionary
+    emails = [os.path.join(root_dir,f) for f in os.listdir(root_dir)]
+FileNotFoundError: [Errno 2] No such file or directory: 'train-mails'
+bash-3.2$ python3 /Users/udayadityasingh/Desktop/machine-learning-101-master/chapter1/code/classifier.py 
+Traceback (most recent call last):
+  File "/Users/udayadityasingh/Desktop/machine-learning-101-master/chapter1/code/classifier.py", line 63, in <module>
+    dictionary = make_Dictionary(TRAIN_DIR)
+  File "/Users/udayadityasingh/Desktop/machine-learning-101-master/chapter1/code/classifier.py", line 10, in make_Dictionary
+    emails = [os.path.join(root_dir,f) for f in os.listdir(root_dir)]
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/udayadityasingh/Desktop/machine-learning-101-master/chapter1/train_mails'
+bash-3.2$ python3 /Users/udayadityasingh/Desktop/machine-learning-101-master/chapter1/code/classifier.py 
+reading and processing emails from file.
+Training model.
+FINISHED classifying. accuracy score : 
+0.9653846153846154
+bash-3.2$ python3 /Users/udayadityasingh/Desktop/machine-learning-101-master/chapter1/code/classifier-fast.py 
+/usr/local/Cellar/python/3.7.1/Frameworks/Python.framework/Versions/3.7/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/udayadityasingh/Desktop/machine-learning-101-master/chapter1/code/classifier-fast.py': [Errno 2] No such file or directory
+bash-3.2$ python3 /Users/udayadityasingh/Desktop/Naive_bayesian/code/classifier-fast.py 
+Traceback (most recent call last):
+  File "/Users/udayadityasingh/Desktop/Naive_bayesian/code/classifier-fast.py", line 8, in <module>
+    import cPickle
+ModuleNotFoundError: No module named 'cPickle'
+bash-3.2$ python3 -m pip install cPickle
+Collecting cPickle
+  Could not find a version that satisfies the requirement cPickle (from versions: )
+No matching distribution found for cPickle
+bash-3.2$ python3 -m pip install matplotlib
+Collecting matplotlib
+  Downloading https://files.pythonhosted.org/packages/2e/81/bb51214944e79f9c9261badd7ef99b573fb0bc9110c0075c6a9e76224d0d/matplotlib-3.0.3-cp37-cp37m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl (14.3MB)
+    100% |████████████████████████████████| 14.3MB 1.1MB/s 
+Collecting pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 (from matplotlib)
+  Downloading https://files.pythonhosted.org/packages/de/0a/001be530836743d8be6c2d85069f46fecf84ac6c18c7f5fb8125ee11d854/pyparsing-2.3.1-py2.py3-none-any.whl (61kB)
+    100% |████████████████████████████████| 71kB 3.4MB/s 
+Collecting python-dateutil>=2.1 (from matplotlib)
+  Downloading https://files.pythonhosted.org/packages/41/17/c62faccbfbd163c7f57f3844689e3a78bae1f403648a6afb1d0866d87fbb/python_dateutil-2.8.0-py2.py3-none-any.whl (226kB)
+    100% |████████████████████████████████| 235kB 4.3MB/s 
+Collecting cycler>=0.10 (from matplotlib)
+  Downloading https://files.pythonhosted.org/packages/f7/d2/e07d3ebb2bd7af696440ce7e754c59dd546ffe1bbe732c8ab68b9c834e61/cycler-0.10.0-py2.py3-none-any.whl
+Collecting kiwisolver>=1.0.1 (from matplotlib)
+  Downloading https://files.pythonhosted.org/packages/68/f2/21ec13269a420c063a3d7d8c87dac030da7b00fc6b27fa88cfb1c72a645b/kiwisolver-1.0.1-cp37-cp37m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl (107kB)
+    100% |████████████████████████████████| 112kB 4.5MB/s 
+Requirement already satisfied: numpy>=1.10.0 in /usr/local/lib/python3.7/site-packages (from matplotlib) (1.16.2)
+Collecting six>=1.5 (from python-dateutil>=2.1->matplotlib)
+  Downloading https://files.pythonhosted.org/packages/73/fb/00a976f728d0d1fecfe898238ce23f502a721c0ac0ecfedb80e0d88c64e9/six-1.12.0-py2.py3-none-any.whl
+Requirement already satisfied: setuptools in /usr/local/lib/python3.7/site-packages (from kiwisolver>=1.0.1->matplotlib) (40.5.0)
+Installing collected packages: pyparsing, six, python-dateutil, cycler, kiwisolver, matplotlib
+Successfully installed cycler-0.10.0 kiwisolver-1.0.1 matplotlib-3.0.3 pyparsing-2.3.1 python-dateutil-2.8.0 six-1.12.0
+bash-3.2$ python3 /Users/udayadityasingh/Desktop/Naive_bayesian/code/classifier-fast.py 
+Traceback (most recent call last):
+  File "/Users/udayadityasingh/Desktop/Naive_bayesian/code/classifier-fast.py", line 8, in <module>
+    import cPickle
+ModuleNotFoundError: No module named 'cPickle'
+bash-3.2$ python3 /Users/udayadityasingh/Desktop/Naive_bayesian/code/classifier-fast.py 
+Traceback (most recent call last):
+  File "/Users/udayadityasingh/Desktop/Naive_bayesian/code/classifier-fast.py", line 8, in <module>
+    import cPickle
+ModuleNotFoundError: No module named 'cPickle'
+bash-3.2$ python3 /Users/udayadityasingh/Desktop/Naive_bayesian/code/classifier-fast.py 
+Traceback (most recent call last):
+  File "/Users/udayadityasingh/Desktop/Naive_bayesian/code/classifier-fast.py", line 8, in <module>
+    import cPickle
+ModuleNotFoundError: No module named 'cPickle'
+bash-3.2$ python3 /Users/udayadityasingh/Desktop/Naive_bayesian/code/classifier-fast.py 
+Traceback (most recent call last):
+  File "/Users/udayadityasingh/Desktop/Naive_bayesian/code/classifier-fast.py", line 8, in <module>
+    import cPickle
+ModuleNotFoundError: No module named 'cPickle'
+bash-3.2$ python3 /Users/udayadityasingh/Desktop/Naive_bayesian/code/classifier-fast.py 
+/usr/local/lib/python3.7/site-packages/matplotlib/font_manager.py:232: UserWarning: Matplotlib is building the font cache using fc-list. This may take a moment.
+  'Matplotlib is building the font cache using fc-list. '
+Fontconfig warning: ignoring UTF-8: not a valid region tag
+reading and processing emails from file.
+Training model.
+FINISHED classifying. accuracy score : 
+0.9730769230769231
+Traceback (most recent call last):
+  File "/Users/udayadityasingh/Desktop/Naive_bayesian/code/classifier-fast.py", line 128, in <module>
+    Z = clf.predict(np.c_[xx[:, i].ravel(), yy.ravel()])
+  File "/usr/local/lib/python3.7/site-packages/numpy/lib/index_tricks.py", line 404, in __getitem__
+    res = self.concatenate(tuple(objs), axis=axis)
+ValueError: all the input array dimensions except for the concatenation axis must match exactly
+bash-3.2$ python3 /Users/udayadityasingh/Desktop/Naive_bayesian/code/classifier-fast.py 
+reading and processing emails from file.
+Training model.
+FINISHED classifying. accuracy score : 
+0.9730769230769231
+Traceback (most recent call last):
+  File "/Users/udayadityasingh/Desktop/Naive_bayesian/code/classifier-fast.py", line 128, in <module>
+    Z = clf.predict(np.c_[xx[:, i].ravel(), yy.ravel()])
+  File "/usr/local/lib/python3.7/site-packages/numpy/lib/index_tricks.py", line 404, in __getitem__
+    res = self.concatenate(tuple(objs), axis=axis)
+ValueError: all the input array dimensions except for the concatenation axis must match exactly
+bash-3.2$ python3 /Users/udayadityasingh/Desktop/Naive_bayesian/code/classifier-fast.py 
+reading and processing emails from file.
+Training model.
+FINISHED classifying. accuracy score : 
+0.9730769230769231
+bash-3.2$ python3 /Users/udayadityasingh/Desktop/Naive_bayesian/code/classifier-fast.py 
+reading and processing emails from file.
+Training model.
+FINISHED classifying. accuracy score : 
+0.9538461538461539
+bash-3.2$ python3 /Users/udayadityasingh/Desktop/M
+MNIST-CNN-in-Keras/                                                   MessFeeSem6.pdf
+MOVIES/                                                               Microelectronic circuits by Sedra Smith,5th ed readable[reduced].pdf
+Mail_classifier/                                                      Microwave Sem 6 Anjali..pdf
+bash-3.2$ python3 /Users/udayadityasingh/Desktop/Mail_classifier/Decision_Tree/classifier-fast.py 
+reading and processing emails from file.
+Training model.
+FINISHED classifying. accuracy score : 
+0.9307692307692308
+bash-3.2$ python3 /Users/udayadityasingh/Desktop/Mail_classifier/Decision_Tree/classifier-fast.py 
+reading and processing emails from file.
+Training model.
+FINISHED classifying. accuracy score : 
+0.9192307692307692
+bash-3.2$ python3 /Users/udayadityasingh/Desktop/Mail_classifier/KNN/classifier-fast.py 
+Traceback (most recent call last):
+  File "/Users/udayadityasingh/Desktop/Mail_classifier/KNN/classifier-fast.py", line 4, in <module>
+    from sklearn.neighbours import KNeighboursClassifier
+ModuleNotFoundError: No module named 'sklearn.neighbours'
+bash-3.2$ python3 /Users/udayadityasingh/Desktop/Mail_classifier/KNN/classifier-fast.py 
+reading and processing emails from file.
+Training model.
+FINISHED classifying. accuracy score : 
+0.8961538461538462
+bash-3.2$ python3 /Users/udayadityasingh/Desktop/Mail_classifier/KNN/classifier-fast.py 
+reading and processing emails from file.
+Training model.
+FINISHED classifying. accuracy score : 
+0.926923076923077
+bash-3.2$ python3 /Users/udayadityasingh/Desktop/Mail_classifier/KNN/classifier-fast.py 
+reading and processing emails from file.
+Training model.
+FINISHED classifying. accuracy score : 
+0.926923076923077
+bash-3.2$ python3 /Users/udayadityasingh/Desktop/Mail_classifier/RandomForest/classifier-fast.py 
+reading and processing emails from file.
+Training model.
+/usr/local/lib/python3.7/site-packages/sklearn/ensemble/forest.py:246: FutureWarning: The default value of n_estimators will change from 10 in version 0.20 to 100 in 0.22.
+  "10 in version 0.20 to 100 in 0.22.", FutureWarning)
+FINISHED classifying. accuracy score : 
+0.9692307692307692
+bash-3.2$ python3 /Users/udayadityasingh/Desktop/Mail_classifier/RandomForest/classifier-fast.py 
+reading and processing emails from file.
+Training model.
+FINISHED classifying. accuracy score : 
+0.9692307692307692
+bash-3.2$ python3 /Users/udayadityasingh/Desktop/Mail_classifier/RandomForest/classifier-fast.py 
+reading and processing emails from file.
+Training model.
+FINISHED classifying. accuracy score : 
+0.9769230769230769
+bash-3.2$ 
