@@ -66,14 +66,10 @@ print("reading and processing emails from file.")
 features_matrix, labels = extract_features(TRAIN_DIR)
 test_feature_matrix, test_labels = extract_features(TEST_DIR)
 
-#features_matrix = features_matrix[:len(features_matrix)/10]
-#labels = labels[:len(labels)/10]
-
-
 model = KNeighborsClassifier(n_neighbors=23)
 
 print("Training model.")
-#train model
+
 model.fit(features_matrix, labels)
 
 predicted_labels = model.predict(test_feature_matrix)
